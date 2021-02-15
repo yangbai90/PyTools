@@ -28,10 +28,10 @@ newfile='new'+filename
 
 ############################################
 ### count for the nodes num and set the active flag to 0
-NodeActiveFlag=np.empty(0,dtype=np.int)
+NodeActiveFlag=np.empty(0,dtype=np.int64)
 nNodes=0
-AllNodeCoords=np.empty((0,3),dtype=np.float)
-nodecoords=np.zeros((1,3),dtype=np.float)
+AllNodeCoords=np.empty((0,3),dtype=np.float64)
+nodecoords=np.zeros((1,3),dtype=np.float64)
 with open(filename,'r') as f:
     for line in f:
         if 'Point(' in line:
@@ -61,8 +61,8 @@ with open(filename,'r') as f:
 print('*** active nodes=%d'%(nActiveNodes))
 #######################################################
 ### now we set the active node dofs
-NodeCoords=np.zeros((nActiveNodes,3),dtype=np.float)
-NodeIDMap=np.zeros(nNodes,dtype=np.int)
+NodeCoords=np.zeros((nActiveNodes,3),dtype=np.float64)
+NodeIDMap=np.zeros(nNodes,dtype=np.int64)
 iInd=0
 for i in range(nNodes):
     if NodeActiveFlag[i]>0:
