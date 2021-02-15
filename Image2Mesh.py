@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 '''
 This script can read a 2D image and convert it into geo file
 @Author: Yang Bai
