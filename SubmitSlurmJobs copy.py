@@ -22,7 +22,7 @@ for subdir, dirs, files in os.walk(scriptdir):
             print('*** start to submit job in:',subdir)
             os.chdir(subdir)
             cmd='sbatch job.sh'
-            # subprocess.run(cmd,shell=True)
+            subprocess.run(cmd,shell=True)
             njobs+=1
 
 print('Submit %d jobs in total !'%(njobs))
